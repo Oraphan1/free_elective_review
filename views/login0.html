@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/login0.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="google-signin-client_id" content="549065543383-jttamv1m6j7tgcvmfeor8o0g9qqa5qog.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../assets/css/bootstrap.bundle.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="card p-5 ">
+        <div class="login">
+            <form>
+                <h1>Log in</h1>
+
+                <div class="input-box ">
+                    <input type="text" placeholder="Username" name="uname" class="form-control form-control-lg">
+                </div>
+
+                <div class="input-box ">
+                    <input type="password" placeholder="Password" name="psw" class="form-control form-control-lg">
+                </div>
+
+                <div class="remember-forgot">
+                    <p>Forgot <a href="./fogot2.html"> password</a></p>
+                </div>
+
+                <!-- <div >
+                    <button onclick="onSignIn()" id="google-login-btn" class=" google"> <i class='bx bxl-google'></i> Login with Google+</button>
+                </div> -->
+                <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                 <button class="login-with-google-btn" onclick="loginwithgoogle">
+                    Sign in With Google
+                 </button> -->
+                 <button class="google"><a href="/auth/google"><i class='bx bxl-google'></i> SignIn with Google+</a></button>
+                <button type="button" class="btn-primary" onclick="login()">Login</button>
+
+                <div class="register-link1">
+                    <p>or<a href="#"> Register</a></p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+<script>
+    function login(){
+        window.location.href = "/admin";
+    }
+    // function onSignIn(googleUser){
+    //     var profile = googleUser.getBasicProfile();
+    //     console.log('ID: '+ profile.getId());
+    //     console.log('Name: ' + profile.getName());
+    //     console.log('Image URL: '+ profile.getImageUrl());
+    //     console.log('Emale: ' + profile.getEmail())
+    // }
+//     function btnlogin(){
+//         var email = document.getElementById("email").value;
+//             var password = document.getElementById("password").value;
+//             const options = {
+//             method: 'POST',
+//             headers: { "Content-Type": "application/json" },
+//             body: JSON.stringify({ "email": email, "password":password }),}
+//             fetch('/login', options).then(function (response) {
+//             if (response.ok) {
+//             return response.text();
+//             }
+//                 throw Error("Wrong username or password");
+//             }).then(function (data) {
+//             // forward to welcome page
+//             location.replace(data);
+//             }).catch(function (error) {
+//             Swal.fire({
+//             "icon": "error",
+//             "title": error
+//             })
+//             });
+//  }
+</script>
+</body>
+
+</html>
